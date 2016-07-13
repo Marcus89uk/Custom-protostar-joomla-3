@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>prototype</name>
+	<version>1.0</version>
+	<creationDate>4/30/2012</creationDate>
+	<author>Marcus</author>
+	<authorEmail>marcus@thesocial.im</authorEmail>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>TPL_PROTOTYPE_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+		<folder>php</folder>
+	</files>
+	<positions>
+		<position>banner</position>
+		<position>debug</position>
+		<position>top-menu</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>footer</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_prototype.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_prototype.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<!--
+				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_PROTOTYPE_BACKGROUND_COLOR_LABEL"
+					description="TPL_PROTOTYPE_BACKGROUND_COLOR_DESC" />
+                -->
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_PROTOTYPE_LOGO_LABEL"
+					description="TPL_PROTOTYPE_LOGO_DESC" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="googleFont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_PROTOTYPE_FONT_LABEL"
+					description="TPL_PROTOTYPE_FONT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="googleFontName" class="" type="text" default="Open+Sans"
+					label="TPL_PROTOTYPE_FONT_NAME_LABEL"
+					description="TPL_PROTOTYPE_FONT_NAME_DESC" />
+
+				<field name="fluidContainer"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_PROTOTYPE_FLUID_LABEL"
+					description="TPL_PROTOTYPE_FLUID_DESC"
+				>
+					<option value="1">TPL_PROTOTYPE_FLUID</option>
+					<option value="0">TPL_PROTOTYPE_STATIC</option>
+				</field>
+				</fieldset>
+                <fieldset name="templateBackground"
+				          label="TPL_PROTOTYPE_BACKGROUND_LABEL" 
+				          description="TPL_PROTOTYPE_BACKGROUND_DESC">
+	            <field name="bgtype" type="list" default="standard" label="Type" description="Select the multiple image display type.">
+		          <option value="standard">Standard</option>
+		          <option value="overlay">Overlay Images (overlays more than one image)</option>
+		          <option value="random">Random Images (displays an image at random)</option>
+		          <option value="daily">Daily Images (displays one image per day in order)</option>
+		          <option value="gradient">Gradient (displays a gradient between two colours)</option>
+		        </field>
+	            <field name="templateColor" class="" type="color" default="#08C"
+				       label="TPL_PROTOTYPE_COLOR_LABEL"
+					   description="TPL_PROTOTYPE_COLOR_DESC" 
+			        />
+					   
+	             <field name="imagebgtwo" type="media" label="Background Image Two" description="Select the second background image."></field>
+	             <field name="imagebgthree" type="media" label="Background Image Three" description="Select the third background image."></field>
+	             <field name="imagebgfour" type="media" label="Background Image Four" description="Select the fourth background image."></field>
+	             <field name="imagebgfive" type="media" label="Background Image Five" description="Select the fifth background image."></field>
+	             <field name="imagebgsix" type="media" label="Background Image Six" description="Select the sixth background image."></field>
+	             <field name="imagebgseven" type="media" label="Background Image Seven" description="Select the seventh background image."></field>
+	             <field name="gradtop" type="text" default="000000" label="Gradient Top Colour" description="The top colour of the gradient. Please enter a 6 figure hex value without the #." ></field>
+		         <field name="gradbottom" type="text" default="ffffff" label="Gradient Bottom Colour" description="The top colour of the gradient. Please enter a 6 figure hex value without the #." ></field>
+		         <field type="spacer" name="myspacer-break" hr="true" />
+	            
+		         <field name="urlsniffer" type="text" filter="raw" default="" label="URL Sniffer" description="Add an element of a URL here if you only wish the module to render on a page whose URL contains this element."></field>
+		         <field name="browsersniffer" type="list" default="all" label="Browser Sniffer" description="Select if you wish your module to be rendered on a specific browser only.">
+                 <option value="all">All Browsers</option>
+                 <option value="msie">Internet Explorer</option>
+                 <option value="firefox">FireFox</option>
+                 <option value="safari">Safari</option>
+                 <option value="chrome">Chrome</option>
+                 <option value="opera">Opera</option>
+                 <option value="iphone">iPhone</option>
+                 <option value="ipad">iPad</option>
+                 <option value="android">Android</option>
+                 <option value="mobile">All mobile devices</option>
+                </field>
+		        <field name="bgid" type="text" default="body" label="ID" description="The CSS element ID. Leave as 'body' if unsure. Can also be applied to divs. eg.'#left' to apply as a background to the left column div." ></field>
+		        <field name="imagebg" type="media" label="Background Image" description="Select the background image." />
+   		        <field name="imageposition" type="list" default="center top" label="Position" description="Image Position">
+		          <option value="left top">Left Top</option>
+		          <option value="left center">Left Center</option>
+		          <option value="left bottom">Left Bottom</option>
+		          <option value="right top">Right Top</option>
+		          <option value="right center">Right Center</option>
+		          <option value="right bottom">Right Bottom</option>
+		          <option value="center top">Center Top</option>
+		          <option value="center center">Center Center</option>
+		          <option value="center bottom">Center Bottom</option>
+		        </field>
+			
+		        <field name="imageattachment" type="list" default="scroll" label="Attachment" description="Scroll or fix the background image.">
+		          <option value="scroll">Scroll</option>
+		          <option value="fixed">Fixed</option>
+		        </field>
+			
+		        <field name="imagerepeat" type="list" default="repeat" label="Repeat" description="Repeating pattern of background.">
+		          <option value="repeat">Repeat All</option>
+		          <option value="repeat-x">Repeat Horizontally</option>
+		          <option value="repeat-y">Repeat Vertically</option>
+		          <option value="no-repeat">No Repeat</option>
+		        </field>
+		
+		        <field name="bgcolor" type="text" default="transparent" label="Background Colour" description="The background colour as either a predifined name (eg. blue), a hexidecimal value (eg. #ff0000) or an RGB value (eg. rgb(0,0,255)). Background colours are always applied behind a background image." ></field>
+		
+		        <field name="importance" type="list" default="No" label="Stress Importance?" description="This will add the !important postfix to overide existing similar CSS.">
+		          <option value=" ">No</option>
+		          <option value="!important">Yes</option>
+		         </field>
+		
+		        <field name="customcss" type="textarea" default="" label="Additional CSS" description="Replace with your additional inline custom CSS." rows="10" cols="45"></field>
+		    </fieldset>
+	    </fields>
+	</config>
+</extension>
